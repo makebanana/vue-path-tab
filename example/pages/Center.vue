@@ -16,6 +16,10 @@
       <el-button type="primary" @click="handleUpdateTab">添加tab</el-button>
       <el-button v-if="isLocked" type="primary" @click="handleUnlockTab">解除本页的锁定</el-button>
     </div>
+
+    <div>
+      <a href="https://github.com/makebanana/backend-vue" target="_blank">查看一个更完整的后台管理系统</a>
+    </div>
   </div>
 
 </template>

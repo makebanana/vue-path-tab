@@ -7,8 +7,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build:example": "node build/build.js",
-    "build": "rollup --environment NODE_ENV:production -c build/rollup.config.js && uglifyjs vue-path-tab.js -cm --comments -o vue-path-tab.min.js",
-    "unit": "jest test/unit/specs --coverage"
+    "build": "rollup --environment NODE_ENV:production -c build/rollup.config.js && uglifyjs vue-path-tab.js -cm --comments -o vue-path-tab.min.js"
   },
   "repository": {
     "type": "git",
