@@ -20,14 +20,11 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080  查看demo
+# serve with hot reload at localhost:8080  启动正常vue项目
 npm run dev
 
-# build for production with minification  打包demo
+# build for production with minification  查看
 npm run build:example
-
-# build for production with minification  rollup this module
-npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report

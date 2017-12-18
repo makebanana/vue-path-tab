@@ -1617,8 +1617,8 @@ var ContentMenu = function () {
       this.ulNode.appendChild(this.otherNode);
       this.menu.appendChild(this.ulNode);
       document.body.appendChild(this.menu);
+      this.menuWidth = parseInt(window.getComputedStyle(this.menu, false).getPropertyValue('width'));
 
-      this.menuHeight = window.getComputedStyle(this.menu, false).getPropertyValue('width');
       on(this.reloadNode, 'click', this.reload);
       on(this.closeNode, 'click', this.close);
       on(this.otherNode, 'click', this.closeOther);
@@ -1644,10 +1644,10 @@ var ContentMenu = function () {
       }
 
       // flex position
-      if (oEvent.clientX + this.menuHeight <= winWidth) {
+      if (oEvent.clientX + this.menuWidth <= winWidth) {
         this.menu.style.left = oEvent.clientX + 'px';
       } else {
-        this.menu.style.left = oEvent.clientX - this.menuHeight + 'px';
+        this.menu.style.left = oEvent.clientX - this.menuWidth + 'px';
       }
 
       if (oEvent.clientY + menuHeight <= winHeight) {
