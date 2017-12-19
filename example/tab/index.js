@@ -5,8 +5,12 @@ Vue.use(PathTab)
 /*
 * tab 显示路由分配
 * 参数说明
-* @params title       tab title
-* @params component  tab component
+* @params *path
+* @params title
+* @params *component
+* @params isDefault
+* @params closable      default true
+* @params isNoMatch
 */
 const path = [
   {
@@ -19,7 +23,8 @@ const path = [
   {
     path: '/nofind',
     title: '没有找到',
-    component: r => require.ensure([], () => r(require('@/pages/NoFind')), 'chunk_nofind')
+    component: r => require.ensure([], () => r(require('@/pages/NoFind')), 'chunk_nofind'),
+    isNoMatch: true
   },
   {
     path: '/user/add',
@@ -98,7 +103,15 @@ const path = [
   }
 ]
 
+/* you can off this, just  contextmenu = false
+* default ['刷新', '关闭', '关闭其他'] or ['REFRESH', 'CLOSE', 'CLOSE OTHER']
+* it depends on navigator.language.indexOf('zh') > -1
+* but you can set language by you want
+*/
+// const contextmenu = ['reload', 'close', 'closeOther']
+
 const pathTab = new PathTab({
+  // contextmenu,
   path
 })
 

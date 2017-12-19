@@ -1,40 +1,64 @@
 
 # vue-path-tab
+> Use vue-path-tab just like vue-router, this.$route => this.$tab
+### Introduction
+`vue-path-tab` is a solution for backend to keep multiple tabs:
 
-### 后台管理系统 多开tab 解决方案
->  - 保存每一个tab的状态
-> - 可以在任意情况下，打开一个tab，也可任意关闭（还有刷新、关闭其他）
-> - 添加了 contentmenu ，像浏览器多开tab一样，快捷操作
+- Simple init, like vue-router
+- Like browser, you will have a contentmenu
+- Can open/close/reload a tab anywhere under the vm
+
+Get started with the [documentation](https://github.com/makebanana/vue-path-tab), or play with the [examples](https://github.com/makebanana/vue-path-tab/tree/master/example).
+
+- -  ![](http://upload-images.jianshu.io/upload_images/5611290-d0bc1afdd45a3881.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-## 解决
-- 保持每一个tab的状态，脱离router，keep-alive 困扰
-- 每个tab 可以配备 关闭、刷新、关闭其他
-
-![active](http://upload-images.jianshu.io/upload_images/5611290-d0bc1afdd45a3881.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080  启动正常vue项目
-npm run dev
-
-# build for production with minification  查看
-npm run build:example
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+## how user
+### install
+```bash
+$ npm i --save vue-path-tab
 ```
+### init
+- - ![tab/index.js](http://upload-images.jianshu.io/upload_images/5611290-0de6e32ba4c79485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- - ![main.js](http://upload-images.jianshu.io/upload_images/5611290-70d7ff57d06b742d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+```javascript
+<path-tabs-view v-model="activePath" defaultPath="/user/list"></path-tabs-view>
+```
+### API
+
+```
+#query and params
+path = '/user/:id'
+temp = '/user/123?isShare=1'
+this.$tab.params => { "id": "123" }
+this.$tab. query => { "isShare: "1" }
+
+# open a tab
+this.$tab.open(*path)
+
+# reload a tab
+this.$tab.reload(path)
+
+# close a tab
+this.$tab.close(*path)
+
+# close other
+this.$tab.closeOther(path)
+
+# change config name
+this.$tab.setTitle(name, path)
+
+# lock a tab
+this.$tab.lock(*path)
+
+# unlock a tab
+this.$tab.unlock(*path)
+```
+
+### Statement
+the base tab is fork from [element-ui/tabs](https://github.com/ElemeFE/element/tree/dev/packages/tabs)
+### License
+[MIT](https://opensource.org/licenses/MIT)
+Copyright (c) 2013-2017 makebanana
