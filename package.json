@@ -1,6 +1,6 @@
 {
   "name": "vue-path-tab",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Like a browser, control the tab page",
   "main": "vue-path-tab.js",
   "scripts": {
