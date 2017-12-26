@@ -10,7 +10,7 @@
 
 Get started with the [documentation](https://github.com/makebanana/vue-path-tab), or play with the [examples](https://github.com/makebanana/vue-path-tab/tree/master/example).
 
-- -  ![](http://upload-images.jianshu.io/upload_images/5611290-d0bc1afdd45a3881.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![demo](http://upload-images.jianshu.io/upload_images/5611290-d61249d4cae3dc77.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## how user
@@ -19,9 +19,9 @@ Get started with the [documentation](https://github.com/makebanana/vue-path-tab)
 $ npm i --save vue-path-tab
 ```
 ### init
-- - ![tab/index.js](http://upload-images.jianshu.io/upload_images/5611290-0de6e32ba4c79485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![tab/index.js](http://upload-images.jianshu.io/upload_images/5611290-0de6e32ba4c79485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- - ![main.js](http://upload-images.jianshu.io/upload_images/5611290-70d7ff57d06b742d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![main.js](http://upload-images.jianshu.io/upload_images/5611290-70d7ff57d06b742d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```javascript
 <path-tabs-view v-model="activePath" defaultPath="/user/list"></path-tabs-view>
