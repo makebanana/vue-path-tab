@@ -1,5 +1,5 @@
 /**
- * vue-path-tab v0.0.2
+ * vue-path-tab v0.0.5
  * (c) 2017 MAKEBANANA
  * mail: makebanana@163.com
  * @license MIT
@@ -2473,7 +2473,7 @@ var PathTab$1 = function () {
         if (item.re) {
           if (item.re.exec(toPath)) {
             newTab = _Object$assign({}, item, { path: toPath, params: {}, query: query });
-            item.re.exec(path).forEach(function (param, i) {
+            item.re.exec(toPath).forEach(function (param, i) {
               if (!i) {
                 return;
               }
